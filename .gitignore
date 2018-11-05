@@ -1,5 +1,6 @@
 # directories
 .idea/
+_data/
 migrations/
 venv/
 

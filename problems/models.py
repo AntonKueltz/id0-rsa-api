@@ -36,6 +36,13 @@ class Problem(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return 'Problem <{}>: {}'.format(self.id, self.title)
+
+    @property
+    def solved(self):
+        return False
+
 
 def create_problem_threads(sender, instance, created, **kwargs):
     if created:

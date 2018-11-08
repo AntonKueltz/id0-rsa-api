@@ -7,4 +7,10 @@ from rest_framework.serializers import ModelSerializer
 class ProblemSerializer(EnumFieldSerializerMixin, ModelSerializer):
     class Meta:
         model = Problem
-        fields = ('title', 'summary', 'description', 'difficulty')
+        fields = ('id', 'title', 'summary', 'description', 'difficulty', 'solved')
+
+
+class ProblemSummarySerializer(EnumFieldSerializerMixin, ModelSerializer):
+    class Meta:
+        model = Problem
+        fields = ('id', 'title', 'summary', 'difficulty', 'solved')

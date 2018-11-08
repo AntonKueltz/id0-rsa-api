@@ -6,6 +6,10 @@ class Thread(models.Model):
     title = models.CharField(max_length=255)
     restricted = models.BooleanField(default=False)
 
+    def __str__(self):
+        return '{} {} Thread'.format(
+            self.title, 'Solution' if self.restricted else 'Problem')
+
 
 class Post(models.Model):
     class Meta:
